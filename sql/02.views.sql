@@ -20,3 +20,18 @@ CREATE VIEW d_divisao_fiscal AS
 SELECT num_divisao_fiscal
 FROM iptu
 GROUP BY num_divisao_fiscal;
+
+CREATE VIEW d_bairro_quartil AS
+WITH b AS (
+    SELECT nme_endloc_bairro_cdl AS bairro,
+           SUM(vlr_venal_terreno) / NULLIF(SUM(mtr_area_real), 0) AS valor_m2
+    FROM iptu
+    WHERE ano_exercicio = 2026 AND des_uso IS NOT NULL
+      AND mtr_area_construida_total > 0 AND nme_endloc_bairro_cdl IS NOT NULL
+    GROUP BY nme_endloc_bairro_cdl
+    HAVING COUNT(*) >= 200
+)
+SELECT bairro AS nme_endloc_bairro_cdl,
+       valor_m2,
+       NTILE(4) OVER (ORDER BY valor_m2) AS quartil
+FROM b;
