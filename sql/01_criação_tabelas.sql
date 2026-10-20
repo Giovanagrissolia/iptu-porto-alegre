@@ -202,3 +202,16 @@ SELECT
     TRY_CAST(REPLACE(vlr_tcl, ',', '.') AS decimal(18,2)),
     TRY_CAST(REPLACE(REPLACE(vlr_tcl_ufm, CHAR(13), ''), ',', '.') AS decimal(18,4))
 FROM iptu_staging;
+
+--- FAIXA ÁREA
+ALTER TABLE iptu
+ADD faixa_area AS (
+    CASE 
+        WHEN mtr_area_construida_total IS NULL OR mtr_area_construida_total = 0 THEN N'00. Sem construção'
+        WHEN mtr_area_construida_total <= 50   THEN N'01. Até 50 m²'
+        WHEN mtr_area_construida_total <= 100  THEN N'02. 50 a 100 m²'
+        WHEN mtr_area_construida_total <= 200  THEN N'03. 100 a 200 m²'
+        WHEN mtr_area_construida_total <= 500  THEN N'04. 200 a 500 m²'
+        ELSE N'05. Acima de 500 m²'
+    END
+);
