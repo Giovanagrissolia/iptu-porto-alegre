@@ -131,7 +131,7 @@ FROM iptu_staging;
 -- 1. limpa a staging
 TRUNCATE TABLE iptu_staging;
 
--- 2. carrega o CSV de 2024
+-- 2. carrega o CSV de 2023
 BULK INSERT iptu_staging
 FROM 'C:\Porto Alegre\iptu_2023.csv'
 WITH (
@@ -169,7 +169,7 @@ FROM iptu_staging;
 -- 1. limpa a staging
 TRUNCATE TABLE iptu_staging;
 
--- 2. carrega o CSV de 2024
+-- 2. carrega o CSV de 2022
 BULK INSERT iptu_staging
 FROM 'C:\Porto Alegre\iptu_2022.csv'
 WITH (
