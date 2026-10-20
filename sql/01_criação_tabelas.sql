@@ -202,9 +202,3 @@ SELECT
     TRY_CAST(REPLACE(vlr_tcl, ',', '.') AS decimal(18,2)),
     TRY_CAST(REPLACE(REPLACE(vlr_tcl_ufm, CHAR(13), ''), ',', '.') AS decimal(18,4))
 FROM iptu_staging;
-
-
-
-
-  
-FROM iptu_staging;
