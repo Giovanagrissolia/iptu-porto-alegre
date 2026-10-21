@@ -54,9 +54,9 @@ Evolução do IPTU, imóveis, valor venal e alíquota efetiva (2022-2026).
 ### 2. Imóvel
 Perfil por faixa de área, divisão fiscal, faixa de IPTU e tipo de imóvel.
 
-![Página Imóvel](https://raw.githubusercontent.com/SEU-USUARIO/SEU-REPOSITORIO/main/images/02-imovel.png)
+![Página Imóvel](Image/2.Imovel_IPTU.png)
 
 ### 3. Bairro
 Alíquota, isenção e valor do m² por bairro e por quartil de valor.
 
-![Página Bairro](https://raw.githubusercontent.com/SEU-USUARIO/SEU-REPOSITORIO/main/images/03-bairro.png)
+![Página Bairro](Image/3.Bairro_IPTU.png)
