@@ -1,10 +1,9 @@
-# IPTU de Porto Alegre: justo e eficiente?
+# Como a carga do IPTU se distribui em Porto Alegre?
 
-Análise em Power BI sobre a distribuição do IPTU lançado em Porto Alegre (2022-2026): quem paga, quem não paga e onde a carga tributária pesa mais.
+Análise em Power BI sobre a distribuição do IPTU lançado em Porto Alegre (2022-2026).
 
 ## Pergunta de negócio
-O IPTU de Porto Alegre é justo e eficiente? A carga é distribuída de forma equitativa por tamanho, valor e localização do imóvel?
-
+Como o IPTU lançado em Porto Alegre se distribui entre os imóveis, e a carga acompanha o tamanho, o valor e a localização deles?
 ## Principais achados
 
 ### 1. A arrecadação cresce, mas menos que o valor dos imóveis
