@@ -10,6 +10,12 @@ Soma do valor do IPTU de todos os imóveis.
 ```DAX
 SUM(iptu[vlr_imposto])
 ```
+## Qtd Imóveis
+Quantidade total de registros de imóveis na base.
+```DAX
+Qtd Imóveis = COUNTROWS(iptu)
+```
+
 ## Alíquota Efetiva
 IPTU total dividido pelo valor venal total, considerando todos os imóveis.
 
@@ -43,10 +49,4 @@ DIVIDE(
     SUM(iptu[mtr_area_real])
 )
 ```
-## Qtd Imóveis
-Quantidade total de registros de imóveis na base.
-```DAX
-Qtd Imóveis = COUNTROWS(iptu)
-```
-
 
