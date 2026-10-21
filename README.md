@@ -43,3 +43,20 @@ Entre 2022 e 2026, o crescimento acumulado foi:
 - A **isenção é bem focalizada** em imóveis pequenos e bairros de menor valor, mas também atinge 13,79% dos imóveis acima de 500 m² e 40,81% dos terrenos sem construção.
 - Os **terrenos sem construção** concentram os extremos: a maior taxa de isenção (40,81%) e o maior IPTU mediano entre pagantes (R$ 1.202,99). 
 - A **desigualdade entre divisões fiscais** mostra que a localização pesa na alíquota, não só o valor do imóvel.
+
+## Páginas do relatório
+
+### 1. Panorama
+Evolução do IPTU, imóveis, valor venal e alíquota efetiva (2022-2026).
+
+![Página Panorama](Image/01.Panorama_IPTU.png)
+
+### 2. Imóvel
+Perfil por faixa de área, divisão fiscal, faixa de IPTU e tipo de imóvel.
+
+![Página Imóvel](https://raw.githubusercontent.com/SEU-USUARIO/SEU-REPOSITORIO/main/images/02-imovel.png)
+
+### 3. Bairro
+Alíquota, isenção e valor do m² por bairro e por quartil de valor.
+
+![Página Bairro](https://raw.githubusercontent.com/SEU-USUARIO/SEU-REPOSITORIO/main/images/03-bairro.png)
