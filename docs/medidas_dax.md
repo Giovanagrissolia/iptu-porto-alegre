@@ -218,6 +218,22 @@ VAR ValAnt =
 RETURN
     DIVIDE ( ValAtual - ValAnt, ValAnt )
 ```
+## Colunas calculadas
+
+### faixa_area
+Classifica o imóvel por tamanho: até 50 m², 50 a 100 m², 100 a 200 m², 200 a 500 m² e acima de 500 m².
+
+```DAX
+faixa_area =
+SWITCH (
+    TRUE (),
+    [area] <= 50, "Até 50 m²",
+    [area] <= 100, "50 a 100 m²",
+    [area] <= 200, "100 a 200 m²",
+    [area] <= 500, "200 a 500 m²",
+    "Acima de 500 m²"
+)
+```
 
 
 
