@@ -220,21 +220,56 @@ RETURN
 ```
 ## Colunas calculadas
 
-### faixa_area
-Classifica o imóvel por tamanho: até 50 m², 50 a 100 m², 100 a 200 m², 200 a 500 m² e acima de 500 m².
-
+### Faixa IPTU
+Coluna calculada que classifica cada imóvel conforme o valor do IPTU cobrado: isento (R$ 0), até R$ 200, R$ 200 a 500, R$ 500 a 1.000, R$ 1.000 a 5.000 e acima de R$ 5.000.
 ```DAX
-faixa_area =
-SWITCH (
-    TRUE (),
-    [area] <= 50, "Até 50 m²",
-    [area] <= 100, "50 a 100 m²",
-    [area] <= 200, "100 a 200 m²",
-    [area] <= 500, "200 a 500 m²",
-    "Acima de 500 m²"
+Faixa IPTU = 
+SWITCH(
+    TRUE(),
+    COALESCE(iptu[vlr_imposto],0) = 0, "Isento (R$0)",
+    COALESCE(iptu[vlr_imposto],0) <= 200, "Até R$200",
+    COALESCE(iptu[vlr_imposto],0) <= 500, "R$200 a 500",
+    COALESCE(iptu[vlr_imposto],0) <=1000, "R$500 a 1.000",
+   COALESCE(iptu[vlr_imposto],0) <= 5000, "R$1.000 a 5.000",
+    "Acima de R$5.000"
 )
-```
 
+```
+### Ordem Faixa IPTU
+Coluna auxiliar que atribui um número de 1 a 6 a cada faixa de IPTU, para o Power BI exibir as faixas na ordem correta nos gráficos.
+Ordem Faixa IPTU = 
+SWITCH(
+    TRUE(),
+    iptu[vlr_imposto] = 0, 1,
+    iptu[vlr_imposto]<= 200, 2,
+    iptu[vlr_imposto]<= 500, 3,
+    iptu[vlr_imposto] <= 1000, 4,
+    iptu[vlr_imposto] <= 5000, 5,
+    6
+)
+
+### % dos Imóveis (faixa IPTU) 
+Mostra qual percentual do total de imóveis está em cada faixa de IPTU.
+% dos Imóveis (faixa IPTU) = 
+DIVIDE(
+    [Qtd Imóveis],
+    CALCULATE(
+        [Qtd Imóveis],
+        REMOVEFILTERS( iptu[Faixa IPTU]),
+        REMOVEFILTERS( iptu[Ordem Faixa IPTU] )
+    )
+)
+### % do IPTU Total (faixa IPTU) 
+Mostra qual percentual da arrecadação total de IPTU vem de cada faixa de IPTU.
+% do IPTU Total (faixa IPTU) = 
+DIVIDE(
+    [IPTU Total],
+    CALCULATE(
+        [IPTU Total],
+        REMOVEFILTERS( iptu[Faixa IPTU] ),
+        REMOVEFILTERS( iptu[Ordem Faixa IPTU])
+    )
+)
 
 
 
