@@ -1,29 +1,29 @@
-# Medidas DAX
-
-## Valor venal total
+# Medidas e Colunas DAX
+## Medidas
+### Valor venal total
 Soma do valor venal de todos os imóveis, ou seja, o valor que a prefeitura atribui aos imóveis para calcular o IPTU.
 ```DAX
 Valor Venal Total = SUM(iptu[vlr_venal_imovel])
 ```
-## IPTU Total
+### IPTU Total
 Soma do valor do IPTU de todos os imóveis.
 ```DAX
 SUM(iptu[vlr_imposto])
 ```
-## Qtd Imóveis
+### Qtd Imóveis
 Quantidade total de registros de imóveis na base.
 ```DAX
 Qtd Imóveis = COUNTROWS(iptu)
 ```
 
-## Alíquota Efetiva
+### Alíquota Efetiva
 IPTU total dividido pelo valor venal total, considerando todos os imóveis.
 
 ```DAX
 Alíquota Efetiva =
 DIVIDE ( [IPTU Total], [Valor Venal Total] )
 ```
-## Alíquota Efetiva (pagantes)
+### Alíquota Efetiva (pagantes)
 IPTU total dividido pelo valor venal total, considerando apenas os imóveis com imposto superior a zero.
 
 ```DAX
@@ -33,14 +33,14 @@ CALCULATE(
     iptu[vlr_imposto]> 0
 )
 ```
-## %Imposto zero
+### %Imposto zero
 Percentual de imóveis com IPTU igual a zero.
 
 ```DAX
 % Imposto Zero = DIVIDE(CALCULATE([Qtd Imóveis], iptu[vlr_imposto] = 0), [Qtd Imóveis])
 ```
 
-## Valor m^2 terreno
+### Valor m^2 terreno
 Valor venal total dos terrenos dividido pela área real total dos imóveis.
 ```DAX
 Valor m² Terreno = 
@@ -51,12 +51,12 @@ DIVIDE(
 
 )
 ```
-## IPTU MEDIANO
+### IPTU MEDIANO
 Valor mediano do IPTU entre os imóveis da base. 50% dos imóveis possuem IPTU abaixo ou igual à mediana e 50% possuem IPTU acima ou igual a ela.
 ```DAX
 IPTU Mediano = MEDIAN(iptu[vlr_imposto])
 ```
-## IPTU MEDIANO PAGANTES
+### IPTU MEDIANO PAGANTES
 Valor mediano do IPTU considerando apenas os imóveis com imposto superior a zero.
 ```DAX
 IPTU Mediano (pagantes) = 
@@ -66,7 +66,7 @@ CALCULATE(
 )
 ```
 
-## ÍNDICE VALOR VENAL
+### ÍNDICE VALOR VENAL
 Compara o valor venal total de cada ano com o de 2022
 ```DAX
 índice Valor Venal = 
@@ -80,7 +80,7 @@ VAR ValorBase =
 RETURN
     DIVIDE( [Valor Venal Total], ValorBase ) * 100
 ```
-## ÍNDICE VALOR m^2 
+### ÍNDICE VALOR m^2 
 Compara o valor m^2 terreno total de cada ano com o de 2022
 ```DAX
 VAR AnoBase = 2022
@@ -93,7 +93,7 @@ VAR ValorBase =
 RETURN
     DIVIDE( [Valor m² Terreno], ValorBase ) * 100
 ```
-## ÍNDICE QTDE IMOVEIS
+### ÍNDICE QTDE IMOVEIS
 Compara a quantidade total de imóveis de cada ano com o de 2022
 ```DAX
 índice Qtde Imoveis = 
@@ -107,7 +107,7 @@ VAR ValorBase =
 RETURN
     DIVIDE( [Qtd Imóveis], ValorBase ) * 100
 ```
-## ÍNDICE IPTU TOTAL
+### ÍNDICE IPTU TOTAL
 Compara o valor do IPTU total de cada ano com o de 2022
 ```DAX
 Índice IPTU Total = 
@@ -121,27 +121,27 @@ VAR ValorBase =
 RETURN
     DIVIDE( [IPTU Total], ValorBase ) * 100
 ```
-## Variação Acumulada Valor Venal
+### Variação Acumulada Valor Venal
 Mostra quanto o valor venal total de cada ano cresceu, em porcentagem, em relação a 2022
 ```DAX
 Var. Acumulada Valor Venal = [Índice Valor Venal] / 100 - 1
 ```
-## Variação Acumulada Valor m^2 
+### Variação Acumulada Valor m^2 
 Mostra quanto o valor do m^2 terreno de cada ano cresceu, em porcentagem, em relação a 2022
 ```DAX
 Var. Acumulada Valor m² = [Índice Valor m² Terreno] / 100 - 1
 ```
-## Variação Acumulada Quantidade de Imóveis
+### Variação Acumulada Quantidade de Imóveis
 Mostra quanto a quantidade de imóveis de cada ano cresceu, em porcentagem, em relação a 2022
 ```DAX
 Var. Acumulada Qtd Imóveis = [índice Qtde Imoveis] / 100 - 1
 ```
-## Variação Acumulada IPTU TOTAL
+### Variação Acumulada IPTU TOTAL
 Mostra quanto o valor de IPTU de cada ano cresceu, em porcentagem, em relação a 2022
 ```DAX
 Var. Acumulada IPTU Total = [Índice IPTU Total] / 100 - 1
 ```
-## Variação Venal vs Ano Ant
+### Variação Venal vs Ano Ant
 Mostra quanto o valor venal total do ano selecionado cresceu (ou caiu), em porcentagem, em relação ao ano anterior.
 ```DAX
 Var Venal vs Ano Ant = 
@@ -152,7 +152,7 @@ VAR ValAnt =
 RETURN
     DIVIDE ( ValAtual - ValAnt, ValAnt )
 ```
-## Variação IPTU Mediano vs Ano Ant
+### Variação IPTU Mediano vs Ano Ant
 Mostra quanto o Iptu mediano do ano selecionado cresceu (ou caiu), em porcentagem, em relação ao ano anterior.
 ```DAX
 Var Iptu mediano vs Ano Ant = 
@@ -163,7 +163,7 @@ VAR ValAnt =
 RETURN
     DIVIDE ( ValAtual - ValAnt, ValAnt )
 ```
-## Variação IPTU Mediano Pagantes vs Ano Ant
+### Variação IPTU Mediano Pagantes vs Ano Ant
 Mostra quanto o Iptu mediano Pagantes (exclui imposto 0) do ano selecionado cresceu (ou caiu), em porcentagem, em relação ao ano anterior.
 ```DAX
 Var IPTU MEDIANO PAGANTES vs Ano Ant = 
@@ -174,7 +174,7 @@ VAR ValAnt =
 RETURN
     DIVIDE ( ValAtual - ValAnt, ValAnt )
 ```
-## Variação Imposto Zero vs Ano Ant
+### Variação Imposto Zero vs Ano Ant
 Mostra quantos pontos percentuais o % de imóveis com imposto zero subiu ou caiu em relação ao ano anterior.
 ```DAX
 Var Imposto Zero p.p. = 
@@ -185,7 +185,7 @@ VAR ValAnt =
 RETURN
     ( ValAtual - ValAnt ) * 100
 ```
-## Variação Alíquota vs Ano Ant
+### Variação Alíquota vs Ano Ant
 Mostra quantos pontos percentuais a alíquota efetiva subiu ou caiu em relação ao ano anterior.
 ```DAX
 Var Alíquota p.p. = 
@@ -196,7 +196,7 @@ VAR ValAnt =
 RETURN
     ( ValAtual - ValAnt ) * 100
 ```
-## Variação Quantidade de Imóveis vs Ano Ant
+### Variação Quantidade de Imóveis vs Ano Ant
 Mostra quanto a quantidade de imóveis do ano selecionado cresceu (ou caiu), em porcentagem, em relação ao ano anterior.
 ```DAX
 Var Imóveis vs Ano Ant = 
@@ -207,7 +207,7 @@ VAR ValAnt =
 RETURN
     DIVIDE ( ValAtual - ValAnt, ValAnt )
 ```
-## Variação IPTU Total vs Ano Ant
+### Variação IPTU Total vs Ano Ant
 Mostra quanto o valor do IPTU do ano selecionado cresceu (ou caiu), em porcentagem, em relação ao ano anterior.
 ```DAX
 Var Imóveis IPTU vs Ano Ant = 
