@@ -41,5 +41,5 @@ Entre 2022 e 2026, o crescimento acumulado foi:
 
 ### 5. Interpretação
 - O sistema é **progressivo no conjunto**: quem tem imóvel maior, mais valioso ou em bairro mais caro paga alíquota maior e concentra a arrecadação.
-- A **isenção é bem focalizada** em imóveis pequenos e bairros de menor valor, mas também atinge 13,79% dos imóveis acima de 500 m² e 40,81% dos terrenos sem construção, o que merece investigação (podem ser imóveis de uso específico, como entidades isentas, ou terrenos de baixo valor).
+- A **isenção é bem focalizada** em imóveis pequenos e bairros de menor valor, mas também atinge 13,79% dos imóveis acima de 500 m² e 40,81% dos terrenos sem construção.
 - A **desigualdade entre divisões fiscais** mostra que a localização pesa na alíquota, não só o valor do imóvel.
