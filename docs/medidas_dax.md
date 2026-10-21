@@ -65,3 +65,59 @@ CALCULATE(
     iptu[vlr_imposto] > 0
 )
 ```
+
+## ÍNDICE VALOR VENAL
+Compara o valor venal total de cada ano com o de 2022
+```DAX
+índice Valor Venal = 
+VAR AnoBase = 2022
+VAR ValorBase =
+    CALCULATE(
+        [Valor Venal Total],
+        ALL( d_calendario[ano_exercicio]),
+        d_calendario[ano_exercicio]= AnoBase
+    )
+RETURN
+    DIVIDE( [Valor Venal Total], ValorBase ) * 100
+```
+## ÍNDICE VALOR M^2
+Compara o valor m^2 terreno total de cada ano com o de 2022
+```DAX
+VAR AnoBase = 2022
+VAR ValorBase =
+    CALCULATE(
+        [Valor m² Terreno],
+        ALL( d_calendario[ano_exercicio]),
+        d_calendario[ano_exercicio]= AnoBase
+    )
+RETURN
+    DIVIDE( [Valor m² Terreno], ValorBase ) * 100
+```
+## ÍNDICE QTDE IMOVEIS
+Compara a quantidade total de imóveis de cada ano com o de 2022
+```DAX
+índice Qtde Imoveis = 
+VAR AnoBase = 2022
+VAR ValorBase =
+    CALCULATE(
+        [Qtd Imóveis],
+        ALL( d_calendario[ano_exercicio]),
+        d_calendario[ano_exercicio]= AnoBase
+    )
+RETURN
+    DIVIDE( [Qtd Imóveis], ValorBase ) * 100
+```
+## ÍNDICE IPTU TOTAL
+Compara o valor do IPTU total de cada ano com o de 2022
+```DAX
+Índice IPTU Total = 
+VAR AnoBase = 2022
+VAR ValorBase =
+    CALCULATE(
+        [IPTU Total],
+        ALL( d_calendario[ano_exercicio]),
+        d_calendario[ano_exercicio]= AnoBase
+    )
+RETURN
+    DIVIDE( [IPTU Total], ValorBase ) * 100
+```
