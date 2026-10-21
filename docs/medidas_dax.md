@@ -141,10 +141,82 @@ Mostra quanto o valor de IPTU de cada ano cresceu, em porcentagem, em relação 
 ```DAX
 Var. Acumulada IPTU Total = [Índice IPTU Total] / 100 - 1
 ```
-
-
-
-
+## Variação Venal vs Ano Ant
+Mostra quanto o valor venal total do ano selecionado cresceu (ou caiu), em porcentagem, em relação ao ano anterior.
+```DAX
+Var Venal vs Ano Ant = 
+VAR AnoAtual = SELECTEDVALUE (d_calendario[ano_exercicio])
+VAR ValAtual = [Valor Venal Total]
+VAR ValAnt =
+    CALCULATE ( [Valor Venal Total], d_calendario[ano_exercicio] = AnoAtual - 1 )
+RETURN
+    DIVIDE ( ValAtual - ValAnt, ValAnt )
+```
+## Variação IPTU Mediano vs Ano Ant
+Mostra quanto o Iptu mediano do ano selecionado cresceu (ou caiu), em porcentagem, em relação ao ano anterior.
+```DAX
+Var Iptu mediano vs Ano Ant = 
+VAR AnoAtual = SELECTEDVALUE (d_calendario[ano_exercicio])
+VAR ValAtual = [IPTU Mediano]
+VAR ValAnt =
+    CALCULATE ( [IPTU Mediano], d_calendario[ano_exercicio] = AnoAtual - 1 )
+RETURN
+    DIVIDE ( ValAtual - ValAnt, ValAnt )
+```
+## Variação IPTU Mediano Pagantes vs Ano Ant
+Mostra quanto o Iptu mediano Pagantes (exclui imposto 0) do ano selecionado cresceu (ou caiu), em porcentagem, em relação ao ano anterior.
+```DAX
+Var IPTU MEDIANO PAGANTES vs Ano Ant = 
+VAR AnoAtual = SELECTEDVALUE (d_calendario[ano_exercicio])
+VAR ValAtual = [IPTU Mediano (pagantes)]
+VAR ValAnt =
+    CALCULATE ( [IPTU Mediano (pagantes)], d_calendario[ano_exercicio] = AnoAtual - 1 )
+RETURN
+    DIVIDE ( ValAtual - ValAnt, ValAnt )
+```
+## Variação Imposto Zero vs Ano Ant
+Mostra quantos pontos percentuais o % de imóveis com imposto zero subiu ou caiu em relação ao ano anterior.
+```DAX
+Var Imposto Zero p.p. = 
+VAR AnoAtual = SELECTEDVALUE ( d_calendario[ano_exercicio])
+VAR ValAtual = [% Imposto Zero]
+VAR ValAnt =
+    CALCULATE ( [% Imposto Zero], d_calendario[ano_exercicio]= AnoAtual - 1 )
+RETURN
+    ( ValAtual - ValAnt ) * 100
+```
+## Variação Alíquota vs Ano Ant
+Mostra quantos pontos percentuais a alíquota efetiva subiu ou caiu em relação ao ano anterior.
+```DAX
+Var Alíquota p.p. = 
+VAR AnoAtual = SELECTEDVALUE ( d_calendario[ano_exercicio])
+VAR ValAtual = [Alíquota Efetiva]
+VAR ValAnt =
+    CALCULATE ( [Alíquota Efetiva], d_calendario[ano_exercicio] = AnoAtual - 1 )
+RETURN
+    ( ValAtual - ValAnt ) * 100
+```
+## Variação Quantidade de Imóveis vs Ano Ant
+Mostra quanto a quantidade de imóveis do ano selecionado cresceu (ou caiu), em porcentagem, em relação ao ano anterior.
+```DAX
+Var Imóveis vs Ano Ant = 
+VAR AnoAtual = SELECTEDVALUE (d_calendario[ano_exercicio])
+VAR ValAtual = [Qtd Imóveis]
+VAR ValAnt =
+    CALCULATE ( [Qtd Imóveis], d_calendario[ano_exercicio] = AnoAtual - 1 )
+RETURN
+    DIVIDE ( ValAtual - ValAnt, ValAnt )
+```
+## Variação IPTU Total vs Ano Ant
+```DAX
+Var Imóveis IPTU vs Ano Ant = 
+VAR AnoAtual = SELECTEDVALUE (d_calendario[ano_exercicio])
+VAR ValAtual = [IPTU Total]
+VAR ValAnt =
+    CALCULATE ( [IPTU Total], d_calendario[ano_exercicio] = AnoAtual - 1 )
+RETURN
+    DIVIDE ( ValAtual - ValAnt, ValAnt )
+```
 
 
 
