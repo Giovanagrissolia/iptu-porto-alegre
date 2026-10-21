@@ -47,6 +47,21 @@ Valor m² Terreno =
 DIVIDE(
     SUM(iptu[vlr_venal_terreno]),
     SUM(iptu[mtr_area_real])
+
+
 )
 ```
-
+## IPTU MEDIANO
+Valor mediano do IPTU entre os imóveis da base. 50% dos imóveis possuem IPTU abaixo ou igual à mediana e 50% possuem IPTU acima ou igual a ela.
+```DAX
+IPTU Mediano = MEDIAN(iptu[vlr_imposto])
+```
+## IPTU MEDIANO PAGANTES
+Valor mediano do IPTU considerando apenas os imóveis com imposto superior a zero.
+```DAX
+IPTU Mediano (pagantes) = 
+CALCULATE(
+    MEDIAN(iptu[vlr_imposto]),
+    iptu[vlr_imposto] > 0
+)
+```
