@@ -5,6 +5,11 @@ Soma do valor venal de todos os imóveis, ou seja, o valor que a prefeitura atri
 ```DAX
 Valor Venal Total = SUM(iptu[vlr_venal_imovel])
 ```
+## IPTU Total
+Soma do valor do IPTU de todos os imóveis.
+```DAX
+SUM(iptu[vlr_imposto])
+```
 ## Alíquota Efetiva
 IPTU total dividido pelo valor venal total, considerando todos os imóveis.
 
@@ -43,9 +48,5 @@ Quantidade total de registros de imóveis na base.
 ```DAX
 Qtd Imóveis = COUNTROWS(iptu)
 ```
-## IPTU Total
-Soma do valor do IPTU de todos os imóveis.
-```DAX
-SUM(iptu[vlr_imposto])
-```
+
 
