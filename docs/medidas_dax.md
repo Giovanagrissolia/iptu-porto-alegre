@@ -121,3 +121,31 @@ VAR ValorBase =
 RETURN
     DIVIDE( [IPTU Total], ValorBase ) * 100
 ```
+## Variação Acumulada Valor Venal
+Mostra quanto o valor venal total de cada ano cresceu, em porcentagem, em relação a 2022
+```DAX
+Var. Acumulada Valor Venal = [Índice Valor Venal] / 100 - 1
+```
+## Variação Acumulada Valor M^2
+Mostra quanto o valor do m^2 terreno de cada ano cresceu, em porcentagem, em relação a 2022
+```DAX
+Var. Acumulada Valor m² = [Índice Valor m² Terreno] / 100 - 1
+```
+## Variação Acumulada Quantidade de Imóveis
+Mostra quanto a quantidade de imóveis de cada ano cresceu, em porcentagem, em relação a 2022
+```DAX
+Var. Acumulada Qtd Imóveis = [índice Qtde Imoveis] / 100 - 1
+```
+## Variação Acumulada IPTU TOTAL
+Mostra quanto o valor de IPTU de cada ano cresceu, em porcentagem, em relação a 2022
+```DAX
+Var. Acumulada IPTU Total = [Índice IPTU Total] / 100 - 1
+```
+
+
+
+
+
+
+
+
