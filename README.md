@@ -46,6 +46,11 @@ Entre 2022 e 2026, o crescimento acumulado foi:
 - Os **terrenos sem construção** concentram os extremos: a maior taxa de isenção (40,81%) e o maior IPTU mediano entre pagantes (R$ 1.202,99). 
 - A **desigualdade entre divisões fiscais** mostra que a localização pesa na alíquota, não só o valor do imóvel.
 
+**Hipóteses a validar** *(não comprovadas pelos dados)*
+- A isenção acima de 500 m² pode estar ligada a imóveis de entidades imunes ou de uso institucional.
+- O aumento da isenção em 2024 coincide com as enchentes de maio, mas a coincidência de datas não prova a causa.
+- A mediana alta dos terrenos pode vir de alíquota territorial diferenciada.
+  
 ## Páginas do relatório
 
 ### 1. Panorama
