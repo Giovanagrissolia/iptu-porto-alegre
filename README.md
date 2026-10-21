@@ -4,6 +4,8 @@ Análise em Power BI sobre a distribuição do IPTU lançado em Porto Alegre (20
 
 ## Pergunta de negócio
 Como o IPTU lançado em Porto Alegre se distribui entre os imóveis, e a carga acompanha o tamanho, o valor e a localização deles?
+## Resposta resumida
+O IPTU lançado é **progressivo e concentrado em poucos imóveis**, mas a **localização e o tipo do imóvel alteram a carga de forma relevante**. Há grupos com isenção alta (terrenos, Divisão 3, imóveis acima de 500 m²) que merecem investigação.
 ## Principais achados
 
 ### 1. A arrecadação cresce, mas menos que o valor dos imóveis
