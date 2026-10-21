@@ -37,7 +37,7 @@ Entre 2022 e 2026, o crescimento acumulado foi:
 - **Por área:** a alíquota efetiva cresce de 0,140% (até 50 m²) para 0,249%, 0,369% e 0,508% (200-500 m²). Acima de 500 m², a alíquota efetiva total cai para 0,359%, mas a **alíquota entre pagantes chega a 0,695%**, a maior de todas. A diferença entre as duas se explica pela alta isenção nessa faixa (13,79%).
 - **Por divisão fiscal (pagantes):** a Divisão 1 tem as maiores alíquotas (0,47% no total) e a Divisão 3 as menores (0,34%). Isso vale em todas as faixas de área: na faixa de 200 a 500 m², por exemplo, são 0,56% (Div. 1), 0,51% (Div. 2) e 0,42% (Div. 3).
 - **Por quartil de valor do m² (bairros):** a alíquota efetiva sobe de 0,218% (1º quartil) para 0,416% (4º), e entre pagantes de 0,32% para 0,47%. Já a isenção cai de **39,43%** (1º quartil) para **4,42%** (4º).
-- **Exceções por bairro:** as maiores alíquotas entre pagantes estão em **Anchieta (0,64%), Navegantes (0,63%) e Jardim Europa (0,60%)**, nem todos entre os bairros de m² mais caro. No gráfico de dispersão, há bairros do 2º e 3º quartis com alíquota próxima ou acima de bairros do 4º quartil, e um bairro isolado com alíquota alta e m² barato.
+- **Exceções por bairro:** as maiores alíquotas entre pagantes estão em **Anchieta (0,64%), Navegantes (0,63%) e Jardim Europa (0,60%)**, nem todos entre os bairros de m² mais caro. 
 
 ### 5. Interpretação
 - O sistema é **progressivo no conjunto**: quem tem imóvel maior, mais valioso ou em bairro mais caro paga alíquota maior e concentra a arrecadação.
