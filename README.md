@@ -8,7 +8,7 @@ Como o IPTU lançado em Porto Alegre se distribui entre os imóveis, e a carga a
 O IPTU lançado é **progressivo e concentrado em poucos imóveis**, mas a **localização e o tipo do imóvel alteram a carga de forma relevante**. Há grupos com isenção alta (terrenos, Divisão 3, imóveis acima de 500 m²) que merecem investigação.
 ## Principais achados
 
-### 1. A arrecadação cresce, mas menos que o valor dos imóveis
+### 1. O IPTU lançado cresce, mas menos que o valor dos imóveis
 Entre 2022 e 2026, o crescimento acumulado foi:
 
 | Indicador | Variação acumulada vs 2022 |
@@ -29,7 +29,7 @@ Entre 2022 e 2026, o crescimento acumulado foi:
 - **Por divisão fiscal:** 4,33% na Divisão 1, 9,22% na Divisão 2 e **32,28% na Divisão 3**, uma diferença de quase 8 vezes.
 - **Por tipo de imóvel:** terrenos sem construção têm **40,81%** de isenção, contra 14,66% dos imóveis construídos (15,10% nos residenciais exclusivos e 12,23% nos não exclusivamente residenciais).
 
-### 3. A arrecadação é muito concentrada
+### 3. O IPTU lançado é muito concentrado
 - Os imóveis com IPTU acima de R$ 5.000 são só **5,07%** do total, mas respondem por **56,36% da arrecadação**.
 - Somando a faixa de R$ 1.000 a 5.000 (21,34% dos imóveis, 32,29% do IPTU), **mais de 26% dos imóveis geram cerca de 89% do IPTU**.
 - No outro extremo, os imóveis isentos (15,38%) e os que pagam até R$ 200 (31,08%) somam quase **46% dos imóveis, mas apenas 1,74% do IPTU**.
