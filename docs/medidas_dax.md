@@ -208,6 +208,7 @@ RETURN
     DIVIDE ( ValAtual - ValAnt, ValAnt )
 ```
 ## Variação IPTU Total vs Ano Ant
+Mostra quanto o valor do IPTU do ano selecionado cresceu (ou caiu), em porcentagem, em relação ao ano anterior.
 ```DAX
 Var Imóveis IPTU vs Ano Ant = 
 VAR AnoAtual = SELECTEDVALUE (d_calendario[ano_exercicio])
