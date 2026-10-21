@@ -237,6 +237,7 @@ SWITCH(
 ```
 ### Ordem Faixa IPTU
 Coluna auxiliar que atribui um número de 1 a 6 a cada faixa de IPTU, para o Power BI exibir as faixas na ordem correta nos gráficos.
+```DAX
 Ordem Faixa IPTU = 
 SWITCH(
     TRUE(),
@@ -250,6 +251,7 @@ SWITCH(
 
 ### % dos Imóveis (faixa IPTU) 
 Mostra qual percentual do total de imóveis está em cada faixa de IPTU.
+```DAX
 % dos Imóveis (faixa IPTU) = 
 DIVIDE(
     [Qtd Imóveis],
@@ -259,8 +261,10 @@ DIVIDE(
         REMOVEFILTERS( iptu[Ordem Faixa IPTU] )
     )
 )
+```
 ### % do IPTU Total (faixa IPTU) 
 Mostra qual percentual da arrecadação total de IPTU vem de cada faixa de IPTU.
+```DAX
 % do IPTU Total (faixa IPTU) = 
 DIVIDE(
     [IPTU Total],
@@ -270,6 +274,6 @@ DIVIDE(
         REMOVEFILTERS( iptu[Ordem Faixa IPTU])
     )
 )
-
+```
 
 
