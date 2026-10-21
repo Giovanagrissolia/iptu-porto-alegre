@@ -248,7 +248,7 @@ SWITCH(
     iptu[vlr_imposto] <= 5000, 5,
     6
 )
-
+```
 ### % dos Imóveis (faixa IPTU) 
 Mostra qual percentual do total de imóveis está em cada faixa de IPTU.
 ```DAX
