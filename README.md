@@ -60,3 +60,9 @@ Perfil por faixa de área, divisão fiscal, faixa de IPTU e tipo de imóvel.
 Alíquota, isenção e valor do m² por bairro e por quartil de valor.
 
 ![Página Bairro](Image/3.Bairro_IPTU.png)
+
+## Ferramentas
+Power BI, DAX, SQL, Figma (design)
+
+## Dados
+Fonte: Dados Abertos POA (https://dadosabertos.poa.br/dataset/iptu). Data de referência: base baixada em 21/10/2026, com IPTU lançado de 2022 a 2026.
