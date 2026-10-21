@@ -80,7 +80,7 @@ VAR ValorBase =
 RETURN
     DIVIDE( [Valor Venal Total], ValorBase ) * 100
 ```
-## ÍNDICE VALOR m^2
+## ÍNDICE VALOR m^2 
 Compara o valor m^2 terreno total de cada ano com o de 2022
 ```DAX
 VAR AnoBase = 2022
@@ -126,7 +126,7 @@ Mostra quanto o valor venal total de cada ano cresceu, em porcentagem, em relaç
 ```DAX
 Var. Acumulada Valor Venal = [Índice Valor Venal] / 100 - 1
 ```
-## Variação Acumulada Valor m^2
+## Variação Acumulada Valor m^2 
 Mostra quanto o valor do m^2 terreno de cada ano cresceu, em porcentagem, em relação a 2022
 ```DAX
 Var. Acumulada Valor m² = [Índice Valor m² Terreno] / 100 - 1
