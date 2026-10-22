@@ -2,6 +2,8 @@
 
 Análise em Power BI sobre a distribuição do IPTU lançado em Porto Alegre (2022-2026).
 
+![Demonstração do relatório](Image/Animação.gif)
+
 ## Pergunta de negócio
 Como o IPTU lançado em Porto Alegre se distribui entre os imóveis, e a carga acompanha o tamanho, o valor e a localização deles?
 ## Resposta resumida
