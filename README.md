@@ -53,17 +53,20 @@ Entre 2022 e 2026, o crescimento acumulado foi:
   
 ## Páginas do relatório
 
-### 1. Panorama
+### 1. Capa
+
+![Página Capa](Image/0.Capa.png)
+### 2. Panorama
 Evolução do IPTU, imóveis, valor venal e alíquota efetiva (2022-2026).
 
 ![Página Panorama](Image/1.Panorama_IPTU.png)
 
-### 2. Imóvel
+### 3. Imóvel
 Perfil por faixa de área, divisão fiscal, faixa de IPTU e tipo de imóvel.
 
 ![Página Imóvel](Image/2.Imovel_IPTU.png)
 
-### 3. Bairro
+### 4. Bairro
 Alíquota, isenção e valor do m² por bairro e por quartil de valor.
 
 ![Página Bairro](Image/3.Bairro_IPTU.png)
