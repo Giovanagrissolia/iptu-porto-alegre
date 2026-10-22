@@ -74,6 +74,13 @@ Alíquota, isenção e valor do m² por bairro e por quartil de valor.
 
 ![Página Bairro](Image/3.Bairro_IPTU.png)
 
+## Estrutura do repositório
+
+- [`Image/`](Image/): prints das páginas do relatório e GIF de demonstração
+- [`Medidas BI/`](Medidas%20BI/): medidas e colunas calculadas em DAX
+- [`sql/`](sql/): scripts de preparação dos dados (views)
+- Relatório online: [Power BI](https://app.powerbi.com/view?r=eyJrIjoiYmE2MTJhN2UtMTgzNC00NjczLTg4ZTgtYjcxZTUzZDBjNDMxIiwidCI6IjU0NDllMjE1LWNjYTAtNGZjMS1hMzBlLWM1MWNmNzkyZWMzNCJ9)
+
 ## Ferramentas
 Power BI, DAX, SQL, Figma (design)
 
