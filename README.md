@@ -4,6 +4,7 @@ Análise em Power BI sobre a distribuição do IPTU lançado em Porto Alegre (20
 
 ![Demonstração do relatório](Image/Animação.gif)
 
+**🔗 [Abrir o relatório no Power BI](https://app.powerbi.com/view?r=eyJrIjoiYmE2MTJhN2UtMTgzNC00NjczLTg4ZTgtYjcxZTUzZDBjNDMxIiwidCI6IjU0NDllMjE1LWNjYTAtNGZjMS1hMzBlLWM1MWNmNzkyZWMzNCJ9)** · [Medidas DAX](Medidas%20BI/) · [Scripts SQL](sql/)
 ## Pergunta de negócio
 Como o IPTU lançado em Porto Alegre se distribui entre os imóveis, e a carga acompanha o tamanho, o valor e a localização deles?
 ## Resposta resumida
